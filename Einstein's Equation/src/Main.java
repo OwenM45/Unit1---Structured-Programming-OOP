@@ -1,4 +1,7 @@
-
+/* By: Owen Maertens
+ * Einstein's equation
+ * 2018-02-06
+ */
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,8 +15,8 @@ public class Main extends JFrame implements ActionListener{
 	JTextField input;
 	JLabel output;
 	
-	public Main() {
-
+	public Main() 
+	{
         initUI();
     }
 	
@@ -27,7 +30,7 @@ public class Main extends JFrame implements ActionListener{
         panel = new JPanel();
         panel.setLayout(null);
         
-        JLabel output = new JLabel("f");
+        output = new JLabel("f");
         output.setBounds(150, 150,90,20);
         panel.add(output);
         
@@ -51,10 +54,12 @@ public class Main extends JFrame implements ActionListener{
         });
 	}
 
-	public void actionPerformed(ActionEvent e) {
-		output.setText("78");
+	public void actionPerformed(ActionEvent e) 
+	{
+		double energy = Float.valueOf(input.getText())*Math.pow(2998000000.0,2);
+		output.setText(Double.toString(energy));
 	}
-	
+	 
 	
 	
 }
