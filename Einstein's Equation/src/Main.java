@@ -56,7 +56,7 @@ public class Main extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) 
 	{
-		double energy = Float.valueOf(input.getText())*Math.pow(2998000000.0,2);
+		double energy = Float.valueOf(input.getText())*Math.pow(299800000,2);
 		output.setText(Double.toString(energy));
 	}
 	 
