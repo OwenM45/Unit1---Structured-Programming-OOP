@@ -17,6 +17,8 @@ public class Calculator extends JFrame implements ActionListener{
 	JButton btnMultiply;
 	JButton btnExponent;
 	
+	JLabel lblOutput;
+	
 	public Calculator() 
 	{
         initUI();
@@ -31,7 +33,7 @@ public class Calculator extends JFrame implements ActionListener{
 	
 	private void initUI() 
 	{ 
-		setTitle("Einstein's Equation");
+		setTitle("Simple calulator");
         setSize(400, 300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -39,11 +41,11 @@ public class Calculator extends JFrame implements ActionListener{
         panel = new JPanel();
         panel.setLayout(null);
         
-		txtInOne = new JTextField("num1");
+		txtInOne = new JTextField("x");
 		txtInOne.setBounds(90, 100, 60, 20);
         panel.add(txtInOne);
         
-        txtInTwo = new JTextField("num2");
+        txtInTwo = new JTextField("y");
         txtInTwo.setBounds(210, 100, 60, 20);
         panel.add(txtInTwo);
         
@@ -72,12 +74,38 @@ public class Calculator extends JFrame implements ActionListener{
         btnExponent.addActionListener(this);  
         panel.add(btnExponent);
         
+        lblOutput = new JLabel("");
+        lblOutput.setBounds(150, 150,90,20);
+        panel.add(lblOutput);
+        
         this.getContentPane().add(panel);
 	}
 
 	public void actionPerformed(ActionEvent e) 
 	{
+		double result = 0;
+		if (e.getSource()==btnPlus) 
+		{
+            result = Float.valueOf(txtInOne.getText()) + Float.valueOf(txtInTwo.getText());
+        }
+		else if (e.getSource()==btnMinus) 
+		{
+            result = Float.valueOf(txtInOne.getText()) - Float.valueOf(txtInTwo.getText());
+        }
+		else if (e.getSource()==btnMultiply) 
+		{
+            result = Float.valueOf(txtInOne.getText()) * Float.valueOf(txtInTwo.getText());
+        }
+		else if (e.getSource()==btnDivide) 
+		{
+            result = Float.valueOf(txtInOne.getText()) / Float.valueOf(txtInTwo.getText());
+        }
+		else if (e.getSource()==btnExponent) 
+		{
+            result = Math.pow(Float.valueOf(txtInOne.getText()) , Float.valueOf(txtInTwo.getText()));
+        }
 		
+		lblOutput.setText("= " + Double.toString(result));
 	}
 
 }
