@@ -1,4 +1,7 @@
-
+/* microwave 
+ * by owen maertens
+ * february 12th
+ */
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -32,7 +35,7 @@ public class Microwave extends JFrame implements ActionListener{
 	
 	private void initUI() 
 	{        
-        setTitle("Einstein's Equation");
+        setTitle("Microwave");
         setSize(400, 200);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -59,21 +62,21 @@ public class Microwave extends JFrame implements ActionListener{
         btnSoup.addActionListener(this);  
         panel.add(btnSoup);
         
-        lblTime = new JLabel("Time");
+        lblTime = new JLabel("Items");
         lblTime.setBounds(170, 60,90,20);
         panel.add(lblTime);
         
-        btnOne = new JButton("1 min");
+        btnOne = new JButton("1 item");
         btnOne.setBounds(50, 90,80,20);
         btnOne.addActionListener(this);  
         panel.add(btnOne);
         
-        btnTwo = new JButton("2 min");
+        btnTwo = new JButton("2 item");
         btnTwo.setBounds(150, 90,80,20);
         btnTwo.addActionListener(this);  
         panel.add(btnTwo);
         
-        btnThree = new JButton("3 min");
+        btnThree = new JButton("3 item");
         btnThree.setBounds(250, 90,80,20);
         btnThree.addActionListener(this);  
         panel.add(btnThree);
