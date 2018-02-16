@@ -6,6 +6,7 @@ import javax.swing.*;
 
 public class Calculator extends JFrame implements ActionListener{
 	
+	//set up gui elements
 	JPanel panel;
 	
 	JTextField txtInOne;
@@ -19,8 +20,10 @@ public class Calculator extends JFrame implements ActionListener{
 	
 	JLabel lblOutput;
 	
+	//constructor
 	public Calculator() 
 	{
+		//setup the gui
         initUI();
     }
 	
@@ -33,6 +36,7 @@ public class Calculator extends JFrame implements ActionListener{
 	
 	private void initUI() 
 	{ 
+		//set up gui window
 		setTitle("Simple calulator");
         setSize(400, 300);
         setLocationRelativeTo(null);
@@ -41,6 +45,8 @@ public class Calculator extends JFrame implements ActionListener{
         panel = new JPanel();
         panel.setLayout(null);
         
+        
+        //setup gui elements
 		txtInOne = new JTextField("x");
 		txtInOne.setBounds(90, 100, 60, 20);
         panel.add(txtInOne);
@@ -83,7 +89,9 @@ public class Calculator extends JFrame implements ActionListener{
 
 	public void actionPerformed(ActionEvent e) 
 	{
+	
 		double result = 0;
+		//perform calculations
 		if (e.getSource()==btnPlus) 
 		{
             result = Float.valueOf(txtInOne.getText()) + Float.valueOf(txtInTwo.getText());

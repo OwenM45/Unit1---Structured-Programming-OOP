@@ -11,6 +11,7 @@ import javax.swing.*;
 
 public class Microwave extends JFrame implements ActionListener{
 
+	//declares the gui elements
 	JPanel panel;
 	
 	JButton btnPizza;
@@ -25,16 +26,20 @@ public class Microwave extends JFrame implements ActionListener{
 	JLabel lblTime;
 	JLabel lblResult;
 	
+	//variables for user input
 	float foodVal = 0;
 	float timeVal = 0;
 	
+	//construct
 	public Microwave() 
 	{
+		//initiates gui elements upon creation
         initUI();
     }
 	
 	private void initUI() 
-	{        
+	{       
+		//sets up the gui window
         setTitle("Microwave");
         setSize(400, 200);
         setLocationRelativeTo(null);
@@ -42,11 +47,13 @@ public class Microwave extends JFrame implements ActionListener{
         
         panel = new JPanel();
         panel.setLayout(null);
-        
+       
+        //sets up the first instruction label
         lblFood = new JLabel("Select food");
         lblFood.setBounds(150, 10,90,20);
         panel.add(lblFood);
         
+        //sets up the buttons with food options
         btnPizza = new JButton("Pizza");
         btnPizza.setBounds(50, 30,80,20);
         btnPizza.addActionListener(this);  
@@ -62,10 +69,12 @@ public class Microwave extends JFrame implements ActionListener{
         btnSoup.addActionListener(this);  
         panel.add(btnSoup);
         
+        //sets up the second instruction label
         lblTime = new JLabel("Items");
         lblTime.setBounds(170, 60,90,20);
         panel.add(lblTime);
         
+        //sets up the buttons with time buttons
         btnOne = new JButton("1 item");
         btnOne.setBounds(50, 90,80,20);
         btnOne.addActionListener(this);  
@@ -90,6 +99,7 @@ public class Microwave extends JFrame implements ActionListener{
 
 	public static void main(String[] args) 
 	{
+		//activates the gui window
 		EventQueue.invokeLater(() -> {
             Microwave MAIN = new Microwave();
             MAIN.setVisible(true);
@@ -99,7 +109,7 @@ public class Microwave extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) 
 	{
 		
-		
+		//sets the value in second of the food
 		if (e.getSource()==btnPizza) 
 		{
 			foodVal = 45;
@@ -116,6 +126,7 @@ public class Microwave extends JFrame implements ActionListener{
 			System.out.println(foodVal);
 		}
 		
+		//sets the multiplier for the food time then calculates the time and outputs it to the output label
 		if (e.getSource()==btnOne) 
 		{
 			timeVal = 1; 
