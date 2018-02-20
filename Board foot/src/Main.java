@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Main extends JFrame implements ActionListener{
-
 		JPanel panel;
 		
 		JTextField txtLength;
