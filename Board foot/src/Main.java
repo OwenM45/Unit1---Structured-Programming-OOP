@@ -7,6 +7,7 @@ import javax.swing.*;
 public class Main extends JFrame implements ActionListener{
 		JPanel panel;
 		
+		//define the GUI elements
 		JTextField txtLength;
 		JTextField txtWidth;
 		
@@ -63,6 +64,7 @@ public class Main extends JFrame implements ActionListener{
 
 		public void actionPerformed(ActionEvent e) 
 		{
+			// calculates then outputs the result
 			double result = Double.valueOf(txtLength.getText())*Double.valueOf(txtWidth.getText());
 			lblResult.setText(Double.toString(result)+" cubed");
 		}
