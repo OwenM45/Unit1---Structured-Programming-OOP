@@ -63,6 +63,7 @@ public class Main {
 		float average = sum/(arrayIn.length * assign);
 		//prints the answer
 		System.out.println("class average: " + average + "%");
+		System.out.println("----------------------------------------------");
 		main(null);
 	}
 
