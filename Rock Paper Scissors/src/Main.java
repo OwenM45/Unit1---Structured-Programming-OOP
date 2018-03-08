@@ -69,8 +69,7 @@ public class Main extends JFrame implements ActionListener{
 			// 0 = rock, 1 = paper, 2 = scissors
 			
 			// restrict more than one radio button from being active at the same time
-			// sets the value of the player choice
-			
+			// sets the value of the player choice	
 			if (e.getSource() == radRock)
 			{
 				radPaper.setSelected(false);
@@ -90,10 +89,12 @@ public class Main extends JFrame implements ActionListener{
 				playerChoice = 2;
 			}
 			
+			//generates the computer choice
 			Random rand = new Random(); 
 			int value = rand.nextInt(3); 
 			System.out.println(value);
 			
+			//checks who won
 			if (playerChoice == 0)
 			{
 				if (value == 0)
