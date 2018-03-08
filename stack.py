@@ -16,7 +16,7 @@ def popBtnCall():
     lstItems.delete ( lstItems.size()-1, last=None )
 
 def peak():
-    messagebox.showinfo("Peak", lstItems.get(lstItem.size()-1, END) + " is the last Item")
+    messagebox.showinfo("Peak", lstItems.get(lstItems.size()-1, END) + " is the last Item")
 
 txtAdd = Entry(top,bd = 4)
 txtAdd.pack()
